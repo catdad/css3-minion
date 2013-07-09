@@ -125,8 +125,8 @@ html, body{
 }
 
 /* eyes and goggles */
-#minion .left.eye{ left: 34px; }
-#minion .right.eye{ right: 34px; }
+#minion .left.eye{ left: 34px; clip: rect(-150px, 66px, 200px, -150px); }
+#minion .right.eye{ right: 34px; clip: rect(-150px, 200px, 200px, -10px); }
 #minion .eye{
 	top: 24px;
 	width: 56px;
@@ -136,9 +136,9 @@ html, body{
 	/* goggles */
 	box-shadow: 0 0 3px 0 rgba(0,0,0,.8) inset,		/* eyeball shadow */
 				1px 4px 0px 0px #ffec1a inset,		/* eye lids */
-				0 0 5px 3px rgba(255,255,255,.6),	/* goggle shadow*/
+				0 0 5px 4px rgba(255,255,255,.6),	/* goggle shadow*/
 				0 0 0 15px darkgray;				/* goggles */
-	
+				
 	background: #fafafa; /* slightly better than white */
 }
 
