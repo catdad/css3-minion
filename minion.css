@@ -41,7 +41,7 @@ html, body{
 
 /* arms */
 #minion .arm{
-	width: 80px;
+	width: 50px;
 	height: 15px;
 	top: 130px;
 	
@@ -51,6 +51,9 @@ html, body{
 	left: 0;
 	-webkit-transform-origin: 0 100% 0;
 	-webkit-transform: rotate(120deg);
+	-webkit-transform: rotate(165deg);
+	
+	border-radius: 0 15px 15px 0; /* elbox */
 }
 #minion .right.arm{
 	right: 0;
@@ -58,9 +61,18 @@ html, body{
 	-webkit-transform: rotate(-120deg);
 }
 
-#minion .arm:after{ content: ""; position: absolute; top: 0; width: 10px; height: 10px; background: black; }
-#minion .right.arm:after{ left: 0; }
-#minion .left.arm:after{ right: 0; }
+/* forearm */
+#minion .arm:after{ content: ""; position: absolute; width: 40px; height: 15px; background: #ffec1a; }
+#minion .right.arm:after{ left: -40px; left: -30px }
+#minion .left.arm:after{
+	right: -38px;
+	top: -6px;
+	
+	-webkit-transform-origin: 0% 50%;/* */
+	-webkit-transform: rotate(105deg);
+	
+	border-radius: 15px 0 0 15px; /* elbow */
+}
 
 /* pants - bottom */
 #minion:after{
@@ -202,3 +214,27 @@ html, body{
 }
 #minion .mouth:before{ left: 35px; }
 #minion .mouth:after{ right: 35px; }
+
+/* animations */
+@-webkit-keyframes wave-left-arm{
+	/* -webkit-transform: rotate(120deg) */
+	0%	{ -webkit-transform: rotate(165deg); }
+	45%	{ -webkit-transform: rotate(156deg); }
+	95%	{ -webkit-transform: rotate(165deg); }
+}
+#minion .left.arm{
+	-webkit-animation-name: wave-left-arm;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes wave-left-forearm{
+	0%	{ -webkit-transform: rotate(125deg); }
+	60%	{ -webkit-transform: rotate(65deg); top: -7px; right: -32px; /* slight adjustment for elbow */ }
+	100%{ -webkit-transform: rotate(125deg); }
+}
+#minion .left.arm:after{
+	-webkit-animation-name: wave-left-forearm;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+}
