@@ -77,6 +77,16 @@ html, body{
 	border-radius: 15px 0 0 15px; /* elbow */
 }
 
+/* pants - texture */
+#minion:after, #minion .pants{
+	background: teal;
+	background-image: repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(255,255,255,.1) 2px, rgba(255,255,255,.1) 4px);
+}
+#minion .pants:before, #minion .pants:after{
+	background: teal;
+	background-image: repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255,255,255,.1) 1px, rgba(255,255,255,.1) 2px);
+}
+
 /* pants - bottom */
 #minion:after{
 	content: "";
@@ -88,7 +98,7 @@ html, body{
 	border-bottom-right-radius: 60px 20px;
 	border-bottom-left-radius: 60px 20px;
 	
-	background: teal;
+	box-shadow: 0 -7px 10px -2px teal inset; /* fix bottom of pants */
 }
 /* pants - flap */
 #minion .pants{
@@ -96,8 +106,6 @@ html, body{
 	height: 45px;
 	left: 50px;
 	bottom: 40px;
-	
-	background: teal;
 }
 /* pants - straps */
 #minion .pants:before, #minion .pants:after{
@@ -109,9 +117,11 @@ html, body{
 	
 	-webkit-transform-origin: 50% 0 0;
 	
-	background: teal;
+	-background: teal;
 }
+/* left strap */
 #minion .pants:before{ left: 0; -webkit-transform: rotate(118deg); border-radius: 0 0 15px/10px 0;}
+/* right strap */
 #minion .pants:after{ right: 0; -webkit-transform: rotate(-118deg); border-radius: 0 0 0 15px/10px;}
 
 /* legs with pants */
@@ -120,10 +130,12 @@ html, body{
 #minion .foot{
 	width: 20px;
 	height: 0;
-	top: 248px;
+	bottom: -28px;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	border-top: 30px solid teal;
+	
+	background-image: repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(255,255,255,.1) 2px, rgba(255,255,255,.1) 4px);
 }
 
 /* shoes */
@@ -199,11 +211,19 @@ html, body{
 	top: 125px;
 	width: 110px;
 	height: 52px;
+	
+	overflow: hidden;
+}
+
+#minion .mouth.happy{
 	border-radius: 40px / 8px;
 	border-bottom-left-radius: 50px;
 	border-bottom-right-radius: 50px;
-	
-	overflow: hidden;
+}
+#minion .mouth.sad{
+	border-radius: 40px / 8px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
 }
 
 /* teeth */
@@ -215,6 +235,10 @@ html, body{
 	height: 20px;
 	top: -8px;
 	border-radius: 4px/6px;
+	
+	/* teeth 3D effect */
+	box-shadow: 0 0px 1px 0px rgba(0,0,0,1) inset,
+				0 1px 4px 1px rgba(0,0,0,.5) inset;
 }
 #minion .mouth:before{ left: 35px; }
 #minion .mouth:after{ right: 35px; }
