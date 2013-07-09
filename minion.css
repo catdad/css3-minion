@@ -62,7 +62,7 @@ html, body{
 #minion .right.arm:after{ left: 0; }
 #minion .left.arm:after{ right: 0; }
 
-/* pants - bottom*/
+/* pants - bottom */
 #minion:after{
 	content: "";
 	position: absolute;
@@ -98,7 +98,6 @@ html, body{
 #minion .pants:before{ left: 0; -webkit-transform: rotate(118deg); border-radius: 0 0 15px/10px 0;}
 #minion .pants:after{ right: 0; -webkit-transform: rotate(-118deg); border-radius: 0 0 0 15px/10px;}
 
-
 /* legs with pants */
 #minion .left.foot{ left: 45px; }
 #minion .right.foot{ right: 45px; }
@@ -126,12 +125,12 @@ html, body{
 }
 
 /* eyes and goggles */
-#minion .left.eye{ left: 40px; }
-#minion .right.eye{ right: 40px; }
+#minion .left.eye{ left: 34px; }
+#minion .right.eye{ right: 34px; }
 #minion .eye{
-	top: 30px;
-	width: 50px;
-	height: 50px;
+	top: 24px;
+	width: 56px;
+	height: 56px;
 	border-radius: 50px;
 	
 	/* goggles */
@@ -153,19 +152,19 @@ html, body{
 	
 	background: black;
 	/* colored part */
-	border: 9px solid skyblue;
+	border: 10px solid skyblue;
 	
-	top: 15px;
-	left: 16px;
+	top: 18px;
+	left: 18px;
 }
 
 /* goggle straps */
 #minion .eye:before{
 	content: "";
 	position: absolute;
-	width: 25px;
+	width: 19px;
 	height: 20px;
-	top: 14px;
+	top: 17px;
 	background: #503A18;
 	
 	/* stitching */
@@ -173,20 +172,20 @@ html, body{
 	border-bottom: 1px dotted lightgray;
 	box-shadow: 0px 0px 0 2px #503A18;
 }
-#minion .left.eye:before{ left: -40px; border-radius: 1px 0 0 1px; }
-#minion .right.eye:before{ right: -40px; border-radius: 0 1px 1px 0; }
+#minion .left.eye:before{ left: -34px; border-radius: 1px 0 0 1px; }
+#minion .right.eye:before{ right: -34px; border-radius: 0 1px 1px 0; }
 
 /* mouth */
 #minion .mouth{
 	background: black;
 	margin: 0 auto;
-	left: 50px;
+	left: 45px;
 	top: 105px;
-	width: 100px;
-	height: 50px;
-	border-radius: 40px / 5px;
-	border-bottom-left-radius: 45px;
-	border-bottom-right-radius: 45px;
+	width: 110px;
+	height: 52px;
+	border-radius: 40px / 8px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
 }
 
 /* teeth */
@@ -198,5 +197,5 @@ html, body{
 	height: 12px;
 	border-radius: 0 0 2px 2px;
 }
-#minion .mouth:before{ left: 34px; }
-#minion .mouth:after{ right: 34px; }
+#minion .mouth:before{ left: 39px; }
+#minion .mouth:after{ right: 39px; }
