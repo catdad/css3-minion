@@ -126,16 +126,18 @@ html, body{
 }
 
 /* eyes and goggles */
-#minion .left.eye{ left: 20px; }
-#minion .right.eye{ right: 20px; }
+#minion .left.eye{ left: 38px; }
+#minion .right.eye{ right: 38px; }
 #minion .eye{
-	top: 12px;
+	top: 30px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50px;
 	
 	/* goggles */
-	border: 18px solid lightgray;
+	box-shadow: 1px 4px 0px 0px #ffec1a inset,		/* eye lids */
+				0 0 5px 4px rgba(255,255,255,.4),	/* goggle shadow*/
+				0 0 0 18px darkgray;				/* goggles */
 	
 	background: white;
 }
@@ -144,16 +146,16 @@ html, body{
 #minion .eye:after{
 	content: "";
 	position: absolute;
-	width: 15px;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 	border-radius: 15px;
 	
 	background: black;
 	/* colored part */
 	border: 8px solid teal;
 	
-	top: 14px;
-	left: 14px;
+	top: 15px;
+	left: 15px;
 }
 
 /* goggle straps */
