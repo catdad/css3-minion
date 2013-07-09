@@ -244,12 +244,13 @@ html, body{
 /* animations */
 @-webkit-keyframes wave-left-arm{
 	0%	{ -webkit-transform: rotate(165deg); }
-	45%	{ -webkit-transform: rotate(156deg); }
+	45%	{ -webkit-transform: rotate(158deg); }
 	95%	{ -webkit-transform: rotate(165deg); }
 }
 #minion .left.arm{
 	-webkit-animation-name: wave-left-arm;
 	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
 	-webkit-animation-iteration-count: infinite;
 }
 
@@ -261,5 +262,6 @@ html, body{
 #minion .left.arm:after{
 	-webkit-animation-name: wave-left-forearm;
 	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
 	-webkit-animation-iteration-count: infinite;
 }
