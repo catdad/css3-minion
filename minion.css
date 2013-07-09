@@ -136,10 +136,10 @@ html, body{
 	/* goggles */
 	box-shadow: 0 0 3px 0 rgba(0,0,0,.8) inset,		/* eyeball shadow */
 				1px 4px 0px 0px #ffec1a inset,		/* eye lids */
-				0 0 5px 4px rgba(255,255,255,.4),	/* goggle shadow*/
+				0 0 5px 3px rgba(255,255,255,.6),	/* goggle shadow*/
 				0 0 0 15px darkgray;				/* goggles */
 	
-	background: white;
+	background: #fafafa; /* slightly better than white */
 }
 
 /* eye irises */
@@ -186,16 +186,19 @@ html, body{
 	border-radius: 40px / 8px;
 	border-bottom-left-radius: 50px;
 	border-bottom-right-radius: 50px;
+	
+	overflow: hidden;
 }
 
 /* teeth */
 #minion .mouth:before, #minion .mouth:after{
 	content: "";
 	position: absolute;
-	background: white;
-	width: 15px;
-	height: 12px;
-	border-radius: 0 0 2px 2px;
+	background: #fafafa; /* slightly better than white */
+	width: 19px;
+	height: 20px;
+	top: -8px;
+	border-radius: 4px/6px;
 }
-#minion .mouth:before{ left: 39px; }
-#minion .mouth:after{ right: 39px; }
+#minion .mouth:before{ left: 35px; }
+#minion .mouth:after{ right: 35px; }
