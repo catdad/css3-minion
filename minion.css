@@ -172,7 +172,7 @@ html, body{
 				1px 4px 0px 0px #ffec1a inset,		/* eye lids */
 				0 0 5px 4px rgba(255,255,255,.6),	/* goggle shadow*/
 				0 0 0 15px darkgray;				/* goggles */
-				
+	
 	background: #fafafa; /* slightly better than white */
 }
 
@@ -276,19 +276,31 @@ html, body{
 
 /* blink - a little hack-y*/
 @-webkit-keyframes blink{
-	96%{
+	96%{ /* default */
 		box-shadow: 0 0 3px 0 rgba(0,0,0,.8) inset,		/* eyeball shadow */
 					1px 4px 0px 0px #ffec1a inset,		/* eye lids */
 					0 0 5px 4px rgba(255,255,255,.6),	/* goggle shadow*/
 					0 0 0 15px darkgray;				/* goggles */
 	}
-	98%{
+	97%{ /* flatten eyelid */
 		box-shadow: 0 0 3px 0 rgba(0,0,0,.8) inset,		/* eyeball shadow */
-					1px 60px 0px 0px #ffec1a inset,		/* eye lids -- change*/
+					1px 4px 0px -20px #ffec1a inset,		/* eye lids -- change*/
 					0 0 5px 4px rgba(255,255,255,.6),	/* goggle shadow*/
 					0 0 0 15px darkgray;				/* goggles */
 	}
-	100%{
+	98%{ /* eyelid down */
+		box-shadow: 0 0 3px 0 rgba(0,0,0,.8) inset,		/* eyeball shadow */
+					1px 85px 0px -20px #ffec1a inset,		/* eye lids -- change*/
+					0 0 5px 4px rgba(255,255,255,.6),	/* goggle shadow*/
+					0 0 0 15px darkgray;				/* goggles */
+	}
+	99%{ /* eyelid up */
+		box-shadow: 0 0 3px 0 rgba(0,0,0,.8) inset,		/* eyeball shadow */
+					1px 4px 0px -20px #ffec1a inset,		/* eye lids -- change*/
+					0 0 5px 4px rgba(255,255,255,.6),	/* goggle shadow*/
+					0 0 0 15px darkgray;				/* goggles */
+	}
+	100%{ /* unflatten shadow */
 		box-shadow: 0 0 3px 0 rgba(0,0,0,.8) inset,		/* eyeball shadow */
 					1px 4px 0px 0px #ffec1a inset,		/* eye lids */
 					0 0 5px 4px rgba(255,255,255,.6),	/* goggle shadow*/
