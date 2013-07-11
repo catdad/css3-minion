@@ -363,3 +363,12 @@ html, body{
 		transform: rotate(360deg);
 	}
 }
+
+/* responsive zooming */
+@media all and (max-width: 800px){
+	#minion{ zoom: 1.5; margin-top: 30px; }
+}
+
+@media all and (max-width: 500px){
+	#minion{ zoom: 1; margin-top: 30px; }
+}
