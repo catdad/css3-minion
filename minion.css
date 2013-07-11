@@ -3,6 +3,7 @@ html, body{
 	padding: 0;
 	background: #e5e5e5;
 	text-align: center;
+	-overflow: hidden;
 }
 
 /* all elements inside minion are absolutely positioned */
@@ -325,4 +326,40 @@ html, body{
 	-webkit-animation-duration: 8s;
 	-webkit-animation-timing-function: ease;
 	-webkit-animation-iteration-count: infinite;
+}
+
+/* highly experimental */
+#rays{
+	position: relative;
+	outline: 1px solid red;
+	top: -330px;
+	height: 330px;
+	width: 330px;
+	margin: 0 auto;
+	background: url(http://www.shayhowe.com/wp-content/themes/letscounthedays/articles/css3-owl/rays.png);
+	-background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%,rgba(96,155,208,0) 69%,rgba(125,185,232,0) 100%);
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	zoom: 1.8;
+	
+	-webkit-animation: spin 10s infinite linear;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% { 
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
 }
